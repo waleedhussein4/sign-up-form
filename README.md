@@ -6,8 +6,8 @@ Practicing HTML CSS forms.
 TODO:
 
 - ~~better font~~
-- refactor font sizes to use em
-- see what others did and do 10 times better
+- ~~refactor font sizes to use em~~
+- peer comparison
 
 - input fields
   - ~~green or red based on validity~~
@@ -20,9 +20,9 @@ TODO:
   - ~~style field borders~~
 
 
-- footer
+- ~~footer~~
   - ~~shadow below form~~
-  - style submit button
-  - link submit button to form using JS
-  - log in line
+  - ~~style submit button~~
+  - ~~link submit button to form~~
+  - ~~log in line~~
 
