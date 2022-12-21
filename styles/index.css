@@ -1,0 +1,126 @@
+/* MISCELLANEOUS: */
+@font-face {
+    font-family: revonza;
+    src: url(../fonts/REVONZA\ Regular.ttf);
+}
+
+:root {
+    --font: "revonza";
+    --letter-spacing: 1px;
+    height: 100vh;
+    width: 100vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+
+
+/* SIDEBAR */
+.sidebar {
+    flex: 1;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+}
+
+.title {
+    background-color: rgba(55, 55, 55, 0.8);
+    font-family: var(--font);
+    font-size: 200%;
+    font-weight: 900;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: var(--letter-spacing);
+    margin-top: 6rem;
+    height: 18%;
+}
+
+.title>* {
+    margin: 0px 8px 0px 8px;
+}
+
+#logo {
+    height: 80%;
+}
+
+
+
+/* DUMMY TEXT */
+.content {
+    flex: 2;
+    width: 100%;
+    font-family: var(--font);
+    letter-spacing: var(--letter-spacing);
+    font-size: 38px;
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+}
+
+.hero {
+    background-color: rgb(58, 72, 56);
+    flex:1;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+
+/* FORM */
+#form {
+    background-color: white;
+    flex:1;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+fieldset {
+    width: 100%;
+    padding: 6px;
+    border: 0;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 400px));
+    column-gap: 30px;
+    row-gap: 18px;
+}
+
+#form label {
+    font-size: 13px;
+}
+
+legend {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* FOOTER */
+.footer {
+    background-color: whitesmoke;
+    flex: 1;
+}
