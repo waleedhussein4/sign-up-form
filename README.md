@@ -9,13 +9,13 @@ TODO:
 - ~~refactor font sizes to use em~~
 - peer comparison
 
-- input fields
+- ~~input fields~~
   - ~~green or red based on validity~~
   - ~~highlight and shadow while typing in input field~~
-  - validation using JS
+  - ~~validation using JS~~
     - ~~password~~
     - ~~mail~~
-    - phone number
+    - ~~phone number~~
     - ~~password confirmation~~
   - ~~style field borders~~
 

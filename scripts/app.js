@@ -1,29 +1,40 @@
 const form = document.getElementById("form");
 form.addEventListener('submit', function(event) {
-    if(!validatePassword()) {
-        event.preventDefault();
-    };
+    // if(!validatePassword()) {
+    //     event.preventDefault();
+    // };
 
     if(!validatePhoneNumber()) {
         event.preventDefault();
     }
     
+});
+
+const phone = document.querySelector('#phone-number');
+
+phone.addEventListener('keydown', function() {
+    phoneNumberFormatter();
 })
 
-var getPhoneNumber = function() {
-    return document.querySelector('#phone-number').value;
+const phoneNumberFormatter = function() {
+    const formattedInputValue = formatPhoneNumber(phone.value);
+    phone.value = formattedInputValue;
 }
 
-
-
-const validatePhoneNumber = function() {
-
+const formatPhoneNumber = function(value) {
+    if(!value) return value;
+    const phoneNumber = value.replace(/[^\d]/g, '');
+    const phoneNumberLength = phoneNumber.length;
+    if(phoneNumberLength < 4) return phoneNumber;
+    if(phoneNumberLength < 7) {
+        return `(${phoneNumber.slice(0,3)}) ${phoneNumber.slice(3)}`;
+    }
+    return `(${phoneNumber.slice(0,3)}) ${phoneNumber.slice(3,6,)}-${phoneNumber.slice(6,9)}`;
 }
-
 
 const pass = document.querySelector('#password');
 const confirmPass = document.querySelector('#confirm-password');
-const passConditions = "Password must contain at least: 8 characters long, 1 uppercase letter, 1 lowercase letter, 1 number, 1 symbol, and no spaces.";
+const passConditions = "*Password must contain at least: 8 characters long, 1 uppercase letter, 1 lowercase letter, 1 number, 1 symbol, and no spaces.";
 const passMatch = document.querySelector('#pass-match');
 
 pass.addEventListener('keyup', function() {
@@ -31,7 +42,19 @@ pass.addEventListener('keyup', function() {
 });
 
 confirmPass.addEventListener('keyup', function() {
-    run();
+    // if the passwords are not equal
+    if(pass.value != confirmPass.value) {
+
+        fixPass();
+        passMatch.innerText = "*Passwords do not match!"
+        passMatch.style.visibility = 'visible';
+
+        return false;
+    }
+    // if passwords are equal, check main password field for requirements
+    else {
+        run();
+    }
 });
    
 const run = function() {
