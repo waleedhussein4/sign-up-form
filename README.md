@@ -13,10 +13,10 @@ TODO:
   - ~~green or red based on validity~~
   - ~~highlight and shadow while typing in input field~~
   - validation using JS
-    - password
-    - mail
+    - ~~password~~
+    - ~~mail~~
     - phone number
-    - password confirmation
+    - ~~password confirmation~~
   - ~~style field borders~~
 
 

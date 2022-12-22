@@ -146,8 +146,14 @@ input:invalid:focus {
 }
 
 input:valid:focus {
-    border: 2px solid rgb(0, 128, 0);
-    box-shadow: 1px 1px 3px rgba(0, 128, 0, 0.5)
+    /* border: 2px solid rgb(0, 128, 0); */
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7)
+}
+
+#pass-match {
+    font-size: 0.5em;
+    color: red;
+    font-weight: 900;
 }
 
 
