@@ -1,13 +1,8 @@
 const form = document.getElementById("form");
 form.addEventListener('submit', function(event) {
-    // if(!validatePassword()) {
-    //     event.preventDefault();
-    // };
-
-    if(!validatePhoneNumber()) {
+    if(!validatePassword()) {
         event.preventDefault();
-    }
-    
+    };
 });
 
 const phone = document.querySelector('#phone-number');
